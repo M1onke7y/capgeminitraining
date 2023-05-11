@@ -1,0 +1,72 @@
+									while 1st
+$cnt=0
+while($cnt -lt 10){
+$fileName='Varsha'+$cnt+'.txt'
+New-Item -Path $fileName -ItemType File
+$cnt+=1
+}
+
+									while 2nd
+$cnt=0
+while($cnt -lt 10){
+$path='Varshitha'+$cnt
+New-Item -Path $path -ItemType Directory
+$cnt+=1
+}
+									
+									while 3rd
+$i=0
+while($i -lt 10){
+$path='Varshitha'+$i
+$j=0
+while($j -lt 10){
+$path1='newFolder'+$j
+New-Item -Path $path/$path1 -ItemType Directory
+$j+=1
+}
+$i+=1
+}
+
+									while 4th
+$i=0
+while($i -lt 10){
+$path='Varshitha'+$i
+$j=0
+while($j -lt 10){
+$path1='newFolder'+$j
+$k=0
+while($k -lt 10){
+$path2='varsha'+$k+'.txt'
+New-Item -Path $path/$path1/$path2 -ItemType File
+$k++
+}
+$j++
+}
+$i++ 
+}
+
+									while 5th
+$i=0
+while($i -lt 10){
+$fileName='varsha'+$i+'.txt'
+$j=0
+while ($j -lt 10){
+$path='Varshitha'+$j
+Copy-Item -Path $fileName -Recurse -Destination $path
+$j++
+}
+$i++
+}
+
+									while 6th
+$i=0
+while($i -lt 10){
+    $path='Varshitha'+$i
+$j=0
+while ($j -lt 10){
+$fileName='varsha'+$j+'.txt'
+Remove-Item -Path $path\$fileName -Recurse
+$j++
+}
+$i++
+}

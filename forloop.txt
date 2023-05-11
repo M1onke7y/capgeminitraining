@@ -1,0 +1,50 @@
+									for 1st
+for($i=0; $i -lt 10; $i++){
+$fileName = 'varsha'+$i+'.txt'
+new-Item -Path $fileName -ItemType File
+}
+
+									for 2nd
+for ($i=0; $i -lt 10; $i++){
+$path='Varshitha'+$i
+New-Item -Path $path -ItemType Directory
+}
+
+									for 3rd
+for ($i=0; $i -lt 10 ; $i++){
+$path='Varshitha'+$i
+for($j=0; $j -lt 10; $j++){
+    $path1='newFolder'+$j
+    New-Item -Path $path/$path1 -ItemType Directory
+    }
+}
+									for 4th
+for($i=0; $i -lt 10; $i++){
+$path='Varshitha'+$i
+for($j=0; $j -lt 10; $j++){
+$path1='newFolder'+$j
+for($k=0; $k -lt 10; $k++){
+$path2='newFile'+$k+'.txt'
+New-Item -Path $path/$path1/$path2 -ItemType File
+}
+}
+}
+
+									for 5th
+for($i=0; $i -lt 10; $i++){
+$path='Varshitha'+$i
+for ($j=0; $j -lt 10; $j++){
+$fileName='Varsha '+$i+'.txt'
+Copy-Item -Path $filename -Recurse -Destination $path
+}
+}
+
+									for 6th
+for($i=0; $i -lt 10; $i++){
+$path='Varshitha'+$i
+
+for($k=0; $k -lt 10; $k++){
+$fileName='Varsha '+$k+'.txt'
+Remove-Item -Path $path/$fileName -Recurse 
+}
+}
